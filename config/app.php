@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'guzzle_test_url' => env('GUZZLE_TEST_URL'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

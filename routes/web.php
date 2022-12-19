@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{offset?}', SysController::class, 'index')->name('index')->where('offset', '[0-9]+');
+Route::get('/heroes/{name?}', SysController::class, 'search')->name('search')->where('name', '[A-Za-z]+');
