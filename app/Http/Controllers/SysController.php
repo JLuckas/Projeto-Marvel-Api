@@ -53,6 +53,10 @@ class SysController extends Controller
 
     }
 
+    public function store(){
+
+    }
+
     public function character($id){
 
         $public_key = '26b8d7455b2c1c787fd1a643c7126507';

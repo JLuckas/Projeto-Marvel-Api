@@ -9,7 +9,7 @@
         <div class="form-group">
             <div class="input-group">
                 <?= '<img src="'.$r->thumbnail->path.'.'.$r->thumbnail->extension.'" class="img"/>'?>
-            </div>
+            </div><br/><br/>
             @if ($r->description == "")
                 <p>This character don't have a description registered on Marvel's website.</p>
             @endif
@@ -19,7 +19,7 @@
             @foreach ($r->comics->items as $comic)
                 <?php
                     $array_url = explode("/", $comic->resourceURI);
-                     $id = end($array_url);
+                    $id = end($array_url);
                 ?>
                 <a>{{$comic->name}}</a><br/>
             @endforeach
