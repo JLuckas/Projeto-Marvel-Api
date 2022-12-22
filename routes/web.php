@@ -15,4 +15,5 @@ use App\Http\Controllers\SysController;
 */
 
 Route::get('/{offset?}', [SysController::class, 'index'])->name('index')->where('offset', '[0-9]+');
-Route::get('/heroes/{name?}', [SysController::class, 'search'])->name('search')->where('name', '[A-Za-z]+');
+Route::get('/search/{name?}', [SysController::class, 'search'])->name('search')->where('name', '[A-Za-z]+');
+Route::get('/character/{id}', [SysController::class, 'character'])->name('character');
