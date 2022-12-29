@@ -16,14 +16,14 @@
             <p>{{$r->description}}</p>
         </div>
         <div class="comics">
-            @foreach ($r->comics->items as $comic)
+            @foreach($r->comics->items as $comic)
                 <?php
                     $array_url = explode("/", $comic->resourceURI);
                     $id = end($array_url);
                 ?>
-                <a>{{$comic->name}}</a><br/>
             @endforeach
         </div>
+
 </div>
 
     @endforeach

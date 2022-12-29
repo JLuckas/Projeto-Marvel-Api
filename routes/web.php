@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SysController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,18 @@ use App\Http\Controllers\SysController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::controller(AuthController::class)->group(function(){
+
+    Route::get('login', 'index')->name('login');
+    Route::get('registration', 'registration')->name('registration');
+    Route::get('logout', 'logout')->name('logout');
+    Route::post('validate_registration', 'validate_registration')->name('auth.validate_registration');
+    Route::post('validate_login', 'validate_login')->name('Auth.validate_login');
+    Route::get('index', 'index')->name('index');
+
+});
+
 
 Route::get('/{offset?}', [SysController::class, 'index'])->name('index')->where('offset', '[0-9]+');
 Route::get('/search/{name?}', [SysController::class, 'search'])->name('search')->where('name', '[A-Za-z]+');
