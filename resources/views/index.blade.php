@@ -18,16 +18,27 @@
         </form>
         <div class="album py-5 bg-light">
             <h3>Search history</h3>
-            <div class="row">
-                    @foreach ($heroes as $info)
-                        <div class="card col-md-4">
-                            <?= '<img src="'.$info->path.'.'.$info->extension.'" class="card-img-top"/>'; ?>
-                            <br />
-                            <h4>{{$info->name}}</h4>
-                            <br />
-                            <a href="{{ route('character', $info->id)}}" class="btn btn-danger btn-sm">See more</a>
-                        </div>
-                    @endforeach
+
+            @if (count($heroes) == 0)
+
+                <h3>No character was searched yet.</h3>
+
+                @else
+                <div class="row">
+                        @foreach ($heroes as $info)
+                            <div class="card col-md-4">
+                                <?= '<img src="'.$info->path.'.'.$info->extension.'" class="card-img-top"/>'; ?>
+                                <br />
+                                <h4>{{$info->name}}</h4>
+                                <br />
+                                <a href="{{ route('character', $info->id)}}" class="btn btn-danger btn-sm">See more</a>
+                            </div>
+                        @endforeach
+
+            @endif
+
+
+
 
         </div>
     </div>

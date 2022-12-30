@@ -1,13 +1,13 @@
 @include('layouts.header')
-<div class="container justify-content-center" style="background-color:white;">
+<div class="container" style="background-color:white;">
     @foreach ($result as $r)
         <div class="buttons">
             <button onclick="window.history.back();" class="btn btn-danger"> Voltar</button>
             <h4 style="margin-top: 30px">{{$r->name}}</h4>
             <p></p>
         </div>
-        <div class="form-group justify-content-center">
-            <div class="input-group">
+        <div class="form-group">
+            <div class="justify-content-center input-group">
                 <?= '<img src="'.$r->thumbnail->path.'/portrait_uncanny'.'.'.$r->thumbnail->extension.'" class="img"/>'?>
             </div><br/><br/>
             @if ($r->description == "")
