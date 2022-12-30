@@ -27,6 +27,6 @@ Route::controller(AuthController::class)->group(function(){
 });
 
 
-Route::get('/{offset?}', [SysController::class, 'index'])->name('index')->where('offset', '[0-9]+');
+Route::get('/', [SysController::class, 'index'])->name('index');
 Route::get('/search/{name?}', [SysController::class, 'search'])->name('search')->where('name', '[A-Za-z]+');
 Route::get('/character/{id}', [SysController::class, 'character'])->name('character');

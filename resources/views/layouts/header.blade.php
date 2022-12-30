@@ -11,14 +11,14 @@
     <title>Marvel Heroes</title>
 </head>
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #ec1d24;">
+    <nav class="navbar navbar-expand-md sticky-bar is-sticky navbar-light navbar-expand-lg mb-5" style="background-color: #ec1d24;">
         <div class="container">
-            <a class="navbar-brand navbar-fixed navbar-expand-sm mr-auto" href="#" style="color: #ffff;">Marvel Heroes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand navbar-fixed mr-auto" href="{{route('index')}}" style="color: #ffff;">Marvel Heroes</a>
+            <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="navbar-collapse collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
                     @guest
 
                     <li class="nav-item">
@@ -44,13 +44,7 @@
         @yield('content')
     </div>
     <div class="container">
-        <div id="head-top card">
-            <a href="{{route('index')}}">
-                <img class="card-img"
-                src="https://designconceitual.com.br/wp-content/uploads/2016/07/Marvel_Studios_logo.svg_.png"
-                style="width: 50%;margin-left: auto;margin-right: auto;display:block;">
-            </a>
-            <br/><br/>
+
         </div>
     {{-- </div> --}}
 
