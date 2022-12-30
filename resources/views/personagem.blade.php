@@ -1,12 +1,12 @@
 @include('layouts.header')
-<div class="container" style="background-color:white;">
+<div class="container justify-content-center" style="background-color:white;">
     @foreach ($result as $r)
         <div class="buttons">
             <button onclick="window.history.back();" class="btn btn-danger"> Voltar</button>
             <h4 style="margin-top: 30px">{{$r->name}}</h4>
             <p></p>
         </div>
-        <div class="form-group">
+        <div class="form-group justify-content-center">
             <div class="input-group">
                 <?= '<img src="'.$r->thumbnail->path.'/portrait_uncanny'.'.'.$r->thumbnail->extension.'" class="img"/>'?>
             </div><br/><br/>
@@ -23,9 +23,10 @@
                 ?>
             @endforeach
         </div>
-
+    @endforeach
 </div>
 
-    @endforeach
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
