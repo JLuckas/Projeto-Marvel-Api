@@ -19,20 +19,20 @@
             <a class="navbar-brand" href="{{route('index')}}">Marvel Heroes</a>
 
             <!-- Menu collapser -->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+            <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#nav-target" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Navigation -->
-            <div class="collapse navbar-collapse" id="nav-target">
+            <div class="navbar-collapse collapse" id="nav-target" style>
                 <ul class="navbar-nav ml-auto">
                     @guest
                         <li class="nav-item">
                             <a href="{{route('login')}}" class="nav-link">Login</a>
                         </li>
 
-                        <li class="nav-item" class="nav-link">
-                            <a href="{{route('registration')}}">Register</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('registration')}}">Register</a>
                         </li>
 
                         @else
