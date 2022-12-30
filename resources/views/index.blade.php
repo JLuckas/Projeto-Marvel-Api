@@ -4,7 +4,7 @@
         <h2>Search for a Marvel character:</h2>
     </div>
     <form action="{{route('search')}}" action="GET">
-        <div class="input-group form-group" style="width: 80%;margin:0 auto;">
+        <div class="flex-container input-group form-group" style="width: 80%;margin:0 auto;">
             <input type="text"
             name="name"
             class="form-control"
